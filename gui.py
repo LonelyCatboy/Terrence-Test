@@ -5,9 +5,6 @@ from stats import StatsFile
 
 from django.db.models import Window
 
-#
-
-
 
 class ScoreWindow():
     def __init__(self, score):
@@ -59,14 +56,17 @@ class StatsWindow():
         self.root.title("Stats")
         self.root.resizable(False, False)
 
+
         #Stats Label
         self.stats_label = tk.Label(self.root, text="Stats", font=("Helvetica", 24))
         self.stats_label.pack(pady=20)
+
 
         #Stats Text
         self.stats_text = tk.Text(self.root, width=30, height=10)
         self.stats_text.pack(pady=20)
         self.stats_text.configure(state="disabled")
+
 
         #Load Stats Button
         self.load_stats_button = tk.Button(self.root, text="Load Stats", command=self.load_stats)
@@ -107,6 +107,7 @@ class MainWindow():
         self.timer_label = tk.Label(self.root, textvariable=self.timer_text, font=("Helvetica", 48))
         self.timer_label.pack(pady=20)
 
+
         #Start Timer Button
         self.start_timer = tk.Button(self.root, text="Start Timer", command=self.new_Timer)
         self.start_timer.pack()
@@ -120,12 +121,14 @@ class MainWindow():
         tk.Label(time_frame, textvariable=self.time_str_var).pack(side = "right")
         time_frame.pack(pady=20)
 
+
         #Increment Button
         self.increment_button = tk.Button(self.root, text="+", command=self.increment,padx = 100, pady = 150)
         self.increment_button.pack(pady=20)
         self.increment_button.configure(state="disabled")
         self.increment_button_default_bg = self.increment_button.cget("bg")
         self.root.bind("<space>", func= lambda event: self.increment_button.invoke())
+
 
         self.root.mainloop()
 
