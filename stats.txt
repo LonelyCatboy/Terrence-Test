@@ -1,0 +1,4 @@
+Joseph:3600.0
+J.Epstein:3600.0
+G.Graefe:24.0
+Glenn II.:824400.0
