@@ -174,7 +174,7 @@ class MainWindow():
             self.score = 0
             self.increment_button.focus_force()
             self.timer = int(self.time_scale.get())
-            self.end_time = time.time() + self.timer * 1 #TIMER 676767
+            self.end_time = time.time() + self.timer * 60 #TIMER 676767
             self.time_scale.configure(state="disabled")
             self.start_timer.configure(state="disabled")
             self.increment_button.configure(state="normal")
